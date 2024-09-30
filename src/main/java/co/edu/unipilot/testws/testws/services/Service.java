@@ -63,6 +63,13 @@ public class Service {
     public Person getPersonByIdJson(@PathParam("id") int id) {
         return persons.get(id);
     }
+    
+    @GET
+    @Path("/getPersonByIdXML/{id}")
+    @Produces(MediaType.APPLICATION_XML)
+    public Person getPersonByIdXML(@PathParam("id") int id) {
+        return persons.get(id);
+    }
 
     @POST
     @Path("/addPersonInJson")
